@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="storage_locations">
+        <item>App private storage (/data/data/...)</item>
+        <item>External storage (/sdcard)</item>
+        <item>Secondary external storage (/mnt/media_rw/sdcard1)</item>
+    </string-array>
+</resources>

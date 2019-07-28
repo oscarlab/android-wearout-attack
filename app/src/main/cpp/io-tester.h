@@ -1,0 +1,4 @@
+#ifndef IO_TESTER_IO_TESTER_H
+#define IO_TESTER_IO_TESTER_H
+
+#endif //IO_TESTER_IO_TESTER_H

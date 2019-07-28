@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.oscar.WearOutAttack.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_state"
+        android:scrollIndicators="right"
+        android:textIsSelectable="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/bt_start"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp_location"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/bt_start"
+        android:layout_below="@+id/cb_ignore_charge"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abort"
+        android:id="@+id/bt_abort"
+        android:background="#de0000"
+        android:layout_alignRight="@+id/tx_delay"
+        android:layout_alignEnd="@+id/tx_delay"
+        android:layout_above="@+id/tv_state" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/tx_loop"
+        android:layout_below="@+id/sp_location"
+        android:layout_alignRight="@+id/sp_location"
+        android:layout_alignEnd="@+id/sp_location"
+        android:text="256"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loop #"
+        android:id="@+id/textView2"
+        android:layout_alignBaseline="@+id/tx_loop"
+        android:layout_alignBottom="@+id/tx_loop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delay (ms)"
+        android:id="@+id/textView3"
+        android:layout_alignBaseline="@+id/tx_delay"
+        android:layout_alignBottom="@+id/tx_delay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/tx_delay"
+        android:text="0"
+        android:layout_below="@+id/tx_loop"
+        android:layout_alignLeft="@+id/tx_loop"
+        android:layout_alignStart="@+id/tx_loop" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_con"
+        android:scrollIndicators="right"
+        android:textIsSelectable="true"
+        android:gravity="bottom"
+        android:layout_below="@+id/tv_state"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Service"
+        android:id="@+id/bt_start_service"
+        android:layout_alignTop="@+id/bt_start"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ignore charge state"
+        android:id="@+id/cb_ignore_charge"
+        android:checked="false"
+        android:layout_below="@+id/tx_delay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
